@@ -286,7 +286,7 @@ class PowerMonitor:
         
         return relative_times, self.power_readings
 
-# ================= MPS SETUP =================
+# ================= Device SETUP =================
 # Device configuration with explicit validation
 print("PyTorch version:", torch.__version__)
 print("MPS available:", torch.backends.mps.is_available())
