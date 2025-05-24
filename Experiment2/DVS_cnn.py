@@ -14,7 +14,6 @@ import threading
 import seaborn as sns
 import pandas as pd
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support, classification_report
-# imports for tonic data processing
 import tonic
 import tonic.transforms as transforms
 from tqdm import tqdm
@@ -25,7 +24,7 @@ dataset_root = os.path.expanduser("./DVSGesturedataset")
 cache_dir = os.path.join(dataset_root, "cached_tensors")
 
 # Hyperparameters
-num_epochs = 3
+num_epochs = 30
 batch_size = 16
 learning_rate = 0.001
 time_steps = 16  # Number of time steps for each sample
