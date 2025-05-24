@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## Step 1: Import Libraries
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -953,7 +949,6 @@ transform_test = transforms.Compose([
 train_dataset = torchvision.datasets.CIFAR10(root="./data", train=True, download=True, transform=transform_train)
 test_dataset = torchvision.datasets.CIFAR10(root="./data", train=False, download=True, transform=transform_test)
 
-# Smaller batch size for SNN 
 train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False)
 
@@ -1066,7 +1061,7 @@ training_results = train_model(
     optimizer=optimizer,
     scheduler=scheduler,
     num_epochs=num_epochs,
-    classes=class_names  # NEW: Pass class names
+    classes=class_names  # Pass class names
 )
 
 # Log final memory usage
@@ -1083,10 +1078,10 @@ if power_metrics:
 # Log Final Metrics
 total_training_time = sum(training_results["epoch_times"])
 final_test_accuracy = training_results["test_accuracies"][-1]
-final_f1_score = training_results["macro_f1_history"][-1]  # NEW
+final_f1_score = training_results["macro_f1_history"][-1]
 
 print(f"\nFinal Test Accuracy: {final_test_accuracy:.2f}%")
-print(f"Final Macro F1 Score: {final_f1_score:.4f}")  # NEW
+print(f"Final Macro F1 Score: {final_f1_score:.4f}")
 print(f"Total Training Time: {total_training_time:.2f}s")
 
 # Additional comprehensive power metrics
@@ -1100,7 +1095,7 @@ if power_metrics:
         print(f"Average Energy per 1% Accuracy Improvement: {avg_efficiency/3600:.4f} Wh")
 
 # Plot comprehensive training results
-plot_training_results(training_results, class_names)  # NEW: Pass class names
+plot_training_results(training_results, class_names)  # Pass class names
 
 # Generate and save final test set confusion matrix
 print("\nGenerating final detailed confusion matrix...")

@@ -487,7 +487,7 @@ def train_model(model, train_loader, test_loader, criterion, optimizer, schedule
         "macro_recall_history": macro_recall_history,
         "macro_f1_history": macro_f1_history,
         
-        # NEW: Store memory usage data
+        # Store memory usage data
         "ram_usage": ram_usage,
         "gpu_allocated_memory": gpu_allocated_memory,
         "gpu_driver_memory": gpu_driver_memory
@@ -711,7 +711,7 @@ def plot_training_results(results, classes=None):
                    horizontalalignment='center', verticalalignment='center',
                    transform=axs[3].transAxes)
     
-    # NEW Plot 5: Memory Usage
+    # Plot 5: Memory Usage
     if results.get("ram_usage") and results.get("gpu_allocated_memory"):
         axs[4].plot(range(1, num_epochs+1), results["ram_usage"], 'b-o', label='RAM Usage (MB)')
         if any(m > 0 for m in results["gpu_allocated_memory"]):
@@ -906,7 +906,6 @@ def calculate_power_metrics(results):
     return metrics
 
 
-# Example usage:
 if __name__ == "__main__":
     # Setup device
     device = (
