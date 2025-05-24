@@ -95,6 +95,7 @@ In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
 
 ## License
 Copyright © 2025 Ryan Saini
+
 This code is provided for academic and research purposes. Please cite this work if you use any part of it in your research.
 
 ## Notes
