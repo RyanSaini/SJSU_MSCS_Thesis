@@ -953,7 +953,7 @@ if __name__ == "__main__":
         criterion=criterion,
         optimizer=optimizer,
         scheduler=scheduler,
-        num_epochs=3,
+        num_epochs=30,
         classes=class_names
     )
     
