@@ -80,6 +80,23 @@ python DVS_csnn.py
 - **Caching**: Subsequent runs will use cached datasets for faster execution
 - **Important**: Do not move dataset files after initial download to maintain cache functionality
 
+
+## Dataset Citations
+This work uses the following datasets:
+
+CIFAR-10
+Krizhevsky, A. (2009). Learning multiple layers of features from tiny images. 
+Technical Report, University of Toronto.
+
+DVS Gesture Dataset
+Amir, A., Taba, B., Berg, D., Melano, T., McKinstry, J., Di Nolfo, C., ... & Modha, D. S. (2017). 
+A low power, fully event-based gesture recognition system. 
+In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 7243-7252).
+
+## License
+Copyright © 2025 Ryan Saini
+This code is provided for academic and research purposes. Please cite this work if you use any part of it in your research.
+
 ## Notes
 
 - Ensure your virtual environment is activated before running any experiments
